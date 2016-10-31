@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>MI-MDW-01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ProcessingServlet</display-name>
+    <servlet-name>ProcessingServlet</servlet-name>
+    <servlet-class>servlets.ProcessingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProcessingServlet</servlet-name>
+    <url-pattern>/ProcessingServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>TripsFilter</display-name>
+    <filter-name>TripsFilter</filter-name>
+    <filter-class>TripsFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>TripsFilter</filter-name>
+    <url-pattern>/TripsFilter</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReservingServlet</display-name>
+    <servlet-name>ReservingServlet</servlet-name>
+    <servlet-class>servlets.ReservingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservingServlet</servlet-name>
+    <url-pattern>/ReservingServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
