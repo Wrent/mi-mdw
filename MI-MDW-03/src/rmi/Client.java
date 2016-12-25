@@ -11,7 +11,7 @@ import java.util.Random;
 public class Client {
 
 	public static void main(String[] args) throws Exception {
-			TripsInterface server = (TripsInterface) Naming.lookup("//127.0.0.1/Trips");
+			TripsInterface server = (Server) Naming.lookup("//127.0.0.1/Trips");
 
 			Random rn = new Random();
 			Trip t = new Trip(rn.nextInt(), 313, "Canada");
