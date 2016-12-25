@@ -1,0 +1,33 @@
+curl http://1-dot-mi-mdw-1071.appspot.com:80/protocol/welcome
+OK
+Your next page is /protocol/get
+send GET parameter "name" with value "few"
+set Header "Accept" to "text/plain"
+curl -H "Accept: text/plain" http://1-dot-mi-mdw-1071.appspot.com:80/protocol/get?name=few
+OK
+Your next page is /protocol/post
+send POST parameter "name" with value "population"
+and set Header "Accept" is "text/plain"
+and set Header "Accept-Language" is "en-US"
+curl -H "Accept: text/plain" -H "Accept-Language: en-US" --data "name=population" http://1-dot-mi-mdw-1071.appspot.com:80/protocol/post
+OK
+Your next page is /protocol/referer
+change referer to value "does"
+set Header "Accept" is "text/html"
+curl -H "Accept: text/html" --referer "does" http://1-dot-mi-mdw-1071.appspot.com:80/protocol/referer
+OK
+Your next page is /protocol/useragent
+and change User-Agent to value "entry"
+and set Header "Accept-Language" is "en-US"
+curl -H "Accept-Language: en-US" --user-agent "entry" http://1-dot-mi-mdw-1071.appspot.com:80/protocol/useragent
+OK
+Your next page is /protocol/cookie
+send cookie called "name" with value "acceptance"
+curl --cookie "name=acceptance" http://1-dot-mi-mdw-1071.appspot.com:80/protocol/cookie\
+OK
+Your next page is /protocol/auth
+authenticate by "mystics:hysteria"
+set Header "Accept" is "text/html"
+curl -H "Accept: text/html" --user mystics:hysteria http://1-dot-mi-mdw-1071.appspot.com:80/protocol/auth
+OK
+Your final result is: open
